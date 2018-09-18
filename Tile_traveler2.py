@@ -26,3 +26,14 @@ def print_travel_options(Directions):
         return_str += "(W)est"
     print(return_str)
 
+def promt_user_and_move(position, Directions):
+    print_travel_options(Directions)
+    direction = input("Direction: ")
+    if not valid_direction(direction, Directions):
+        print("Not a valid direction!")
+        return position
+    return move(position, direction)
+
+
+
+
