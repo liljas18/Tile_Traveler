@@ -3,11 +3,11 @@ position = 11
 
 while position != 31:
     if position == 11:
-       print("You can travel: (N)orth.")
-       direction = Input("Direction: ")
-       if direction.lower() == "n":
+        print("You can travel: (N)orth.")
+        direction = input("Direction: ")
+        if direction.lower() == "n":
            position +=1
-        else 
+        else:
             print("Not a valid direction!")
 
     elif position == 12:
