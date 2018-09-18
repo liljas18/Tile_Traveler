@@ -77,7 +77,10 @@ while position != 31:
         elif direction.lower() == "s":
             position -= 1
         else: print("Not a valid direction!")
-
+    
+    else: 
+        print("How did you do that?")
+print("Victory")
     
 
         
