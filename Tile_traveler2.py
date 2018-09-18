@@ -10,4 +10,19 @@ def move(position, direction):
         return position + 10
     else:
         return position
-        
+
+def valid_direction(Input, Directions):
+    return(Input.lower() in Directions)
+
+def print_travel_options(Directions):
+    return_str = "You can travel: "
+    if "n" in Directions:
+        return_str += "(N)orth"
+    if "s" in Directions:
+        return_str += "(S)outh"
+    if "e" in Directions:
+        return_str += "(E)ast"
+    if "w" in Directions:
+        return_str += "(W)est"
+    print(return_str)
+
