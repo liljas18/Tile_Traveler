@@ -59,4 +59,14 @@ while position != 31:
         else:
             print("Not a valid direction!")
 
+    elif position == 33:
+        print("You can travel: (W)est or (S)outh")
+        direction = input("Direction: ")
+        if direction.lower() == "w":
+            position -= 10
+        elif direction.lower() == "s":
+            position -= 1
+        else:
+            print("Not a valid direction!")
+
         
