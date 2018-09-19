@@ -43,6 +43,27 @@ def promt_user_and_move(position, directions, print_options = True):
 
 position = 11 
 
+while position != 31:
+    if position == 11:
+        position = promt_user_and_move(position, "n")
+    elif position == 12:
+        position = promt_user_and_move(position, "nes")
+    elif position == 13:
+        position = promt_user_and_move(position, "es")
+    elif position == 21:
+        position = promt_user_and_move(position, "n")
+    elif position == 22:
+        position = promt_user_and_move(position, "sw")
+    elif position == 23:
+        position = promt_user_and_move(position, "we")
+    elif position == 33:
+        position = promt_user_and_move(position, "sw")
+    elif position == 32:
+        position = promt_user_and_move(position, "ns")
+    else:
+        print("How did you do that?")
+
+print ("Victory!")
 
 
 
