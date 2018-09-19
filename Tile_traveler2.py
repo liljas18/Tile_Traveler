@@ -32,14 +32,17 @@ def print_travel_options(directions):
         options = append_option(options, "(W)est")
     print(f"{return_str}{options}.")
 
-def promt_user_and_move(position, directions):
-    print_travel_options(directions)
+def promt_user_and_move(position, directions, print_options = True):
+    if print_options:
+        print_travel_options(directions)
     direction = input("Direction: ")
     if not valid_direction(direction, directions):
         print("Not a valid direction!")
-        return position
+        return promt_user_and_move(position, directions, False)
     return move(position, direction)
 
 position = 11 
+
+
 
 
