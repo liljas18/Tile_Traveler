@@ -14,26 +14,32 @@ def move(position, direction):
 def valid_direction(Input, Directions):
     return(Input.lower() in Directions)
 
-def print_travel_options(Directions):
-    return_str = "You can travel: "
-    if "n" in Directions:
-        return_str += "(N)orth"
-    if "s" in Directions:
-        return_str += "(S)outh"
-    if "e" in Directions:
-        return_str += "(E)ast"
-    if "w" in Directions:
-        return_str += "(W)est"
-    print(return_str)
+def append_option(option, new_option):
+    if len(option) > 0:
+        return option + "or" + new_option
+    return new_option
 
-def promt_user_and_move(position, Directions):
-    print_travel_options(Directions)
+def print_travel_options(directions):
+    return_str = "You can travel: "
+    options = ""
+    if "n" in directions:
+        options = append_option (options, "(N)orth")
+    if "s" in directions:
+        options = append_option(options, "(S)outh")
+    if "e" in directions:
+        options = append_option(options, "(E)ast")
+    if "w" in directions:
+        options = append_option(options, "(W)est")
+    print(f"{return_str}{options}.")
+
+def promt_user_and_move(position, directions):
+    print_travel_options(directions)
     direction = input("Direction: ")
-    if not valid_direction(direction, Directions):
+    if not valid_direction(direction, directions):
         print("Not a valid direction!")
         return position
     return move(position, direction)
 
-
+position = 11 
 
 
